@@ -15,3 +15,7 @@ START c:\ .. couchdb.bat
 GIT
 https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/
 
+REMOVE FOLDER LOCALLY
+git rm one-of-the-directories
+git commit -m "Remove duplicated directory"
+git push origin master
