@@ -1,0 +1,63 @@
+{
+
+    "docs":[
+    
+{
+   "type": "article",
+   "title": "Monkeys are awesome",
+   "posted_at": "2008-09-14T20:45:14Z",
+   "tags": [
+       "monkeys",
+       "awesome"
+   ],
+   "status": "Live",
+   "author_id": "craig@barkingiguana.com",
+   "updated_at": "2008-09-14T21:23:59Z",
+   "body": "The article body would go here for"
+},
+{
+   "type": "article",
+   "title": "Lions are awesome",
+   "posted_at": "2011-09-14T20:45:14Z",
+   "tags": [
+       "lions",
+       "awesome"
+   ],
+   "status": "Live",
+   "author_id": "peter@barkingiguana.com",
+   "updated_at": "2008-09-14T21:23:59Z",
+   "body": "The article body would go here by"
+},
+{
+   "type": "article",
+   "title": "Cats are awesome",
+   "posted_at": "2013-09-14T21:45:14Z",
+   "tags": [
+       "cats",
+       "awesome"
+   ],
+   "status": "Live",
+   "author_id": "mark@barkingiguana.com",
+   "updated_at": "2008-09-14T21:23:59Z",
+   "body": "The article body would go here then ..."
+},
+{
+  "_id": "_design/articles",
+  "language": "javascript",
+  "views": {
+    "all": {
+      "map": "function(doc) { if(doc.type == 'article') { emit(null, doc); }  }"
+    },
+    "by_author_id": {
+      "map": "function(doc) { if(doc.type == 'article') { emit([doc.author_id], doc); }  }"
+    },
+    "by_status": {
+      "map": "function(doc) { if(doc.type == 'article') { emit([doc.status], doc); }  }"
+    },
+    "titles": {
+      "map": "function(doc) { if(doc.type == 'article') { emit(null, { 'id': doc._id, 'title': doc.title }); } }"
+    }
+  }
+}
+        ]
+}
