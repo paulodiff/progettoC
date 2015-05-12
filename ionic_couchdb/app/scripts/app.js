@@ -62,7 +62,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: "/couchdb",
       views: {
         'menuContent': {
-          templateUrl: "templates/playlists.html",
+          templateUrl: "templates/CouchDbList.html",
           controller: 'CouchdbCtrl'
         }
       }

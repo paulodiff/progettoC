@@ -46,14 +46,24 @@ angular.module('starter.controllers', [])
 
 
 .controller('CouchdbCtrl', function($scope) {
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
+    
+    $scope.status;
+    $scope.customers;
+    $scope.orders;
+
+    getCustomers();
+
+    function getCustomers() {
+        dataFactory.getCustomers()
+            .success(function (custs) {
+                $scope.customers = custs;
+            })
+            .error(function (error) {
+                $scope.status = 'Unable to load customer data: ' + error.message;
+            });
+    }
+    
+    
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {

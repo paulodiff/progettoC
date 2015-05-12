@@ -31,8 +31,9 @@ Angular Style Guide
 https://github.com/johnpapa/angular-styleguide
 
 
-GIT REMOVE FOLDER LOCALLY
-git rm one-of-the-directories
+GIT REMOVE FOLDER LOCALLY  git rm one-of-the-directories
+
+git add *
 git commit -m "Remove duplicated directory"
 git push origin master (USER:paulodiff PASSWORD:lasolita)
 
