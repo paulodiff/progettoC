@@ -1,9 +1,10 @@
 <ion-view view-title="CouchDbList">
   <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in customers" href="#/app/playlists/{{playlist.id}}">
+    <ion-list class="list card">
+      <ion-item class="item item-icon-left" ng-repeat="playlist in customers" href="#/app/playlists/{{playlist.id}}">
+          <i class="icon ion-home"></i>
           <h2>{{playlist.value.body}}</h2>
-          <h2>{{playlist.value.title}}</h2>
+          <p>{{playlist.value.title}}</p>
       </ion-item>
         <h4>Status: {{status}}</h4>
         {{orders}}
