@@ -1,7 +1,7 @@
-angular.module('customersApp')
+angular.module('starter')
     .factory('dataFactory', ['$http', function($http) {
 
-    var urlBase = 'http://127.0.0.1:5984/_utils/database.html?todos/_design/articles/_view/by_status';
+    var urlBase = 'http://127.0.0.1:5984/todos/_design/articles/_view/by_status';
     //http://127.0.0.1:5984/_utils/database.html?todos/_design/articles/_view/by_status
     var dataFactory = {};
 

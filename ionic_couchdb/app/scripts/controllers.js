@@ -45,7 +45,8 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('CouchdbCtrl', function($scope) {
+.controller('CouchdbCtrl', ['$scope', 'dataFactory', '$log',
+        function ($scope, dataFactory, $log) {
     
     $scope.status;
     $scope.customers;
@@ -56,7 +57,10 @@ angular.module('starter.controllers', [])
     function getCustomers() {
         dataFactory.getCustomers()
             .success(function (custs) {
-                $scope.customers = custs;
+                $log.debug(custs);
+                $scope.customers = custs.rows;
+                $log.debug(custs.rows);
+                $scope.status = custs.total_rows;
             })
             .error(function (error) {
                 $scope.status = 'Unable to load customer data: ' + error.message;
@@ -64,7 +68,7 @@ angular.module('starter.controllers', [])
     }
     
     
-})
+}])
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

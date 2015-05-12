@@ -2,8 +2,11 @@
   <ion-content>
     <ion-list>
       <ion-item ng-repeat="playlist in customers" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
+          <h2>{{playlist.value.body}}</h2>
+          <h2>{{playlist.value.title}}</h2>
       </ion-item>
+        <h4>Status: {{status}}</h4>
+        {{orders}}
     </ion-list>
   </ion-content>
 </ion-view>
