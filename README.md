@@ -31,7 +31,7 @@ Angular Style Guide
 https://github.com/johnpapa/angular-styleguide
 
 
-REMOVE FOLDER LOCALLY
+GIT REMOVE FOLDER LOCALLY
 git rm one-of-the-directories
 git commit -m "Remove duplicated directory"
 git push origin master (USER:paulodiff PASSWORD:lasolita)
@@ -43,3 +43,5 @@ CouchDb bulk update db.json
 curl -d @your_file.json -X POST $DB/_bulk_docs
 curl -H "Content-Type:application/json"  -d @c:\test\ionic_couchdb\db.json -X POST http://127.0.0.1:5984/todos/_bulk_docs
 Content-Type: application/json
+
+ALtre info

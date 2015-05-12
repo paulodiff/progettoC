@@ -57,6 +57,18 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     })
 
+  
+    .state('app.couchdb', {
+      url: "/couchdb",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/playlists.html",
+          controller: 'CouchdbCtrl'
+        }
+      }
+    })
+  
+  
   .state('app.single', {
     url: "/playlists/:playlistId",
     views: {
